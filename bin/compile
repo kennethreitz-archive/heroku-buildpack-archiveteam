@@ -8,6 +8,9 @@ indent() {
   sed -u 's/^/       /'
 }
 
+# Go to build dir
+cd $1
+
 echo "-----> Fetching rsync"
 curl -L -s -o rsync.tar.gz http://f.cl.ly/items/241p0R2f2T1z0L321J1W/rsync.tar.gz
 tar -zxf rsync.tar.gz
