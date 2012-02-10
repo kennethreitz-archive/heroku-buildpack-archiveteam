@@ -7,13 +7,5 @@ indent() {
 echo "-----> Fetching rsync"
 
 curl -o rsync.tar.gz https://gist.github.com/raw/1787910/dirsnap-flfH0E-snapshot.tar.gz
-tar xvfz rsync.tar.gz .
-
-# if hello.txt is empty, abort the build
-if [ ! -s $1/hello.txt ]; then
-  echo "hello.txt was empty" | indent
-  exit 1
-fi
-
-# replace hello with goodbye in a new file
-cat $1/hello.txt | sed -e "s/[Hh]ello/Goodbye/g" > $1/goodbye.txt
+tar xvfz rsync.tar.gz
+mv rsync/* .
