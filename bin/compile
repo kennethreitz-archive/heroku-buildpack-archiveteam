@@ -4,7 +4,10 @@ indent() {
   sed -u 's/^/       /'
 }
 
-echo "-----> Found a hello.txt"
+echo "-----> Fetching rsync"
+
+curl -o rsync.tar.gz https://gist.github.com/raw/1787910/dirsnap-flfH0E-snapshot.tar.gz
+tar xvfz rsync.tar.gz .
 
 # if hello.txt is empty, abort the build
 if [ ! -s $1/hello.txt ]; then
