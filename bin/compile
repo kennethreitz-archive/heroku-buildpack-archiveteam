@@ -10,7 +10,7 @@ indent() {
 
 echo "-----> Fetching rsync"
 
-curl -L -o rsync.tar.gz https://gist.github.com/raw/1787910/dirsnap-flfH0E-snapshot.tar.gz
+curl -L -o rsync.tar.gz http://f.cl.ly/items/241p0R2f2T1z0L321J1W/rsync.tar.gz
 
 set +e
-OUT=$(tar xvfz rsync.tar.gz)
+OUT=$(tar -zxf rsync.tar.gz)
