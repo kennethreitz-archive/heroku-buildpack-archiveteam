@@ -9,9 +9,9 @@ indent() {
 }
 
 echo "-----> Fetching rsync"
-curl -L -o rsync.tar.gz http://f.cl.ly/items/241p0R2f2T1z0L321J1W/rsync.tar.gz
+curl -L -s -o rsync.tar.gz http://f.cl.ly/items/241p0R2f2T1z0L321J1W/rsync.tar.gz
 tar -zxf rsync.tar.gz
 
 echo "-----> Fetching warc-get"
-curl -L -o warc-get.tar.gz http://f.cl.ly/items/2V2h1W1o0j0W3a463N1y/warc-get.tar.gz
+curl -L -s -o warc-get.tar.gz http://f.cl.ly/items/2V2h1W1o0j0W3a463N1y/warc-get.tar.gz
 tar -zxf warc-get.tar.gz
